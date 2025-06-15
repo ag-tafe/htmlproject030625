@@ -1,1 +1,82 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- prettier-ignore -->
+    <meta charset="UTF-8">
+    <!-- prettier-ignore -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="./assets/css/meyer-reset.css">
+    <!-- all layouts -->
+    <link rel="stylesheet" href="./assets/css/layouts.css">
+    <script src="./assets/js/contact_us.js" defer></script>
+    <title>Alexey Gunyakov contact page</title>
+  </head>
+  <body>
+    <header class="main_header">
+      <!-- site logo -->
+      <!-- prettier-ignore -->
+      <img src="https://placehold.co/50x75" alt="Company logo" width="50" height="75">      
+      <!-- navigation (site) start -->
+      <nav>
+        <a href="home.html">Home</a>      
+        <a href="contact.html">Contact</a>      
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="mywork.html">Sample projects</a>
+      </nav>
+      <!-- navigation (site) end -->
+    </header>
+
+    <!-- Main start -->
+    <main>
+      <!-- https://webref.ru/layout/learn-html-css/building-forms -->
+      <article>
+        <div class="contact_form_header">
+          Contact Us
+        </div>
+        <form id="contact_form">
+          <fieldset class="message_info">
+                     
+            <label>
+              Name:
+              <input type="text" id="input_name" name="name">
+            </label>           
+             
+            <label>
+              Email:
+              <input type="email" id="input_email" name="email">
+            </label>          
+                       
+            <label>
+              Message:
+              <textarea id="input_message" name="message" rows="7"></textarea>
+            </label>
+          </fieldset>  
+          <fieldset class="message_action">
+            <input class="btn" id="btnSubmit" type="button" name="submit" value="Send">            
+          </fieldset>
+        </form>
+        <footer>
+          <div id="form_result">
+            ---
+          </div>
+        </footer>
+      </article>
+      
+      
+      
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer class="my_page_footer">
+      &copy; Copyright 2025 Alexey Gunyakov & Adrian Gould. All rights reserved.
+      <a href="https://www.northmetrotafe.wa.edu.au/">North Metro TAFE</a>      
+    </footer>
+    <!-- Footer end -->
+  </body>
+</html>
+
+

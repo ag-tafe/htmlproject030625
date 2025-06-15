@@ -414,5 +414,111 @@
   a:visited {
     color: #4C212A;
   }  
+
+  /* Contact us form */
+  form {
+    border: 1px solid #c6c7cc;
+    border-radius: 5px;
+    /*font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    overflow: hidden;    
+    width: 100%;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    border-radius: 5px;
+    /*font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    margin: 0;
+  }
+
+  .message_info {
+    padding: 20px 20px 0 20px;
+  }
+
+  .message_info label {
+    /*color: #395870;*/
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .message_info input {
+    background: #fff;
+    border: 1px solid #c6c7cc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+    color: #636466;
+    padding: 6px;
+    margin-top: 6px;
+    width: 100%;
+  }
+
+  .message_info textarea {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .message_action {
+    background: #08A4BD;
+    border-top: 1px solid #c6c7cc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .message_action .btn {
+    background: linear-gradient(#49708f, #293f50);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    /*float: none;*/    
+    padding: 8px 16px;
+    width: 30%;
+  }
+
+  .message_action label {
+    color: #7c7c80;
+    font-size: 12px;
+    float: left;
+    margin: 10px 0 0 20px;
+  }
+
+  .contact_form_header {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /*
   
+
+  .form_part {
+    
+    vertical-align: top;
+    
+    padding: 8px;
+  }
+
+  .send_button {
+    text-align: center;    
+    padding: 8px;
+    font-size: 1.4em;
+    width: 100%;    
+  }
+
+  #input_name {
+    width: max-content;
+  }*/
+
+
+  /*
+  #input_email
+
+  #input_message
+  */
 }
