@@ -5,7 +5,10 @@
     height: 9%;
     width: 95%;
     display: grid;
-    column-gap: 5px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+
+    /*column-gap: 5px;*/
 
     margin-left: 2px;
     margin-right: 2px;
@@ -26,11 +29,38 @@
   }
 
   /* grid item */
-  #company_name {
+  #company_logo {
     grid-column-start: 1;
     grid-column-end: 2;
-    font-size: 1.5em;
-  }  
+  }
+  
+  /* grid item */
+  #hamburger {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: end;    
+  }
+
+  /* https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+  .stripe {        
+    width: 45px;
+    height: 8px;
+    background-color: black;
+    margin: 12px 0;
+  }
+
+  .navigation {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFFFFF;
+  }
+
+  .hidden {
+    display: none;
+  }
+
 
   /* main start */
   main {
@@ -63,6 +93,13 @@
     font-weight: bold;
     background-color: #00635D;
   }
+
+  article > header {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #01172F;
+  }
+
   /* main end */
 
   /* footer start */
@@ -113,7 +150,7 @@
   }
 
   article > footer {
-    background-color: #01172F;
+    background-color: #FFFFFF;
   }
   /* article end */
 
@@ -130,6 +167,188 @@
   aside {
     display: none;
   }
+
+  /* Contact us form mobile version */
+  form {
+    border: 1px solid #c6c7cc;
+    border-radius: 5px;    
+    overflow: hidden;    
+    width: 100%;
+  }
+
+  .message_info {
+    padding: 10px;    
+  }
+
+  .message_info label {
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+
+  .message_info input,
+  .message_info textarea {
+    font-size: 1em;
+    padding: 8px;
+    margin-top: 5px;
+    width: 95%;
+  }
+
+  /*
+  .message_info textarea {
+    width: 100%;
+  }*/
+
+  .message_action {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .message_action .btn {
+    width: 100%;  /* Full width on mobile */
+    background: linear-gradient(#49708f, #293f50);
+    color: #FFFFFF;
+    padding: 10px;
+  }
+
+  .message_action label {
+    float: none;
+    text-align: center;
+    margin: 10px 0 0 0;
+  }
+
+  .contact_form_header {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Ninja API mobile version start */
+  /* Ninja API elements */
+  #ninja_header {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #ninja_query {
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #ninja_query_parameter {
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+
+  #ninja_result {
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  /* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+  /* unticked checkbox */
+  .container {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    margin-top: 8px;    
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .green-checkbox {
+    position: absolute;
+    top: 0;
+    /*left: 35%;  0 */
+    height: 15px; /* 25 */
+    width: 15px;  /* 25 */
+    border: 2px solid black;
+  }
+
+  /* Green when checked */
+  .container input:checked ~ .green-checkbox {
+    background-color: green;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .green-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .green-checkbox:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .green-checkbox:after {
+    left: 4px;  /* 9 */
+    top: 0px;    /* 5 */
+    width: 5px;   /* 5 */
+    height: 10px;  /* 10 */
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  /* green button with white font */
+  #btnSubmit {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
 }
 
 @media screen and (min-width: 601px) {
@@ -175,13 +394,18 @@
 
   #company_name {
     align-self: center;
+    display: none;
   }
 
   /* page header end */
 
+  /* hide mobile navigation */
+  #mobile_navigation {
+    display: none;
+  }
+
   /* page navigation start */
-  nav {
-    /*gap: 100px;*/
+  nav {    
     font-size: 0.5em;
     justify-content: space-between;
     align-self: flex-start; /* nav menu aligned to the top */
@@ -190,13 +414,6 @@
     width: 98%;
     display: flex;
     padding-left: 20px;
-
-    /*
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    */
 
     padding-left: 4px;
     padding-right: 4px;
@@ -223,13 +440,12 @@
   }
   /* top navigation end */
 
+  
   /* main contents start */
   /* https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named */
   main {
     width: 72%;
-    display: grid;
-    /*grid-template-areas: "myarticles myasides";
-    grid-template-columns: 8fr 2fr;*/
+    display: grid;    
     flex-grow: 1; /* to occupy the area until the page bottom */
     align-content: start; /* articles placed one after another */
 
@@ -267,11 +483,7 @@
     border-bottom: 2px solid black;
 
     padding: 8px;
-    /* padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px; */
-
+    
     margin-left: 2px;
     margin-right: 2px;
     margin-top: 2px;
@@ -364,11 +576,7 @@
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 
-    /*padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;*/
-
+    
     padding: 30px;
     padding-bottom: 50px;
 
@@ -392,12 +600,7 @@
     border-right: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-
-    /*padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;*/
-
+    
     padding: 30px;
     padding-bottom: 50px;
 
@@ -418,8 +621,7 @@
   /* Contact us form */
   form {
     border: 1px solid #c6c7cc;
-    border-radius: 5px;
-    /*font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    border-radius: 5px;    
     overflow: hidden;    
     width: 100%;
   }
@@ -431,8 +633,7 @@
   }
 
   input {
-    border-radius: 5px;
-    /*font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    border-radius: 5px;    
     margin: 0;
   }
 
@@ -440,8 +641,7 @@
     padding: 20px 20px 0 20px;
   }
 
-  .message_info label {
-    /*color: #395870;*/
+  .message_info label {    
     display: block;
     font-weight: bold;
     margin-bottom: 20px;
@@ -475,8 +675,7 @@
     border: 0;
     color: #fff;
     cursor: pointer;
-    font-weight: bold;
-    /*float: none;*/    
+    font-weight: bold;       
     padding: 8px 16px;
     width: 30%;
   }

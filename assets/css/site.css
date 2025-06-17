@@ -605,6 +605,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .w-4\/5 {
   width: 80%;
 }

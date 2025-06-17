@@ -10,13 +10,29 @@
     <!-- all layouts -->
     <link rel="stylesheet" href="./assets/css/layouts.css">
     <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/menu.js" defer></script>
     <title>Projects</title>
   </head>
   <body>
     <header class="main_header">
       <!-- site logo -->
       <!-- prettier-ignore -->
-      <img src="https://placehold.co/50x75" alt="Company logo" width="50" height="75">      
+      <img src="https://placehold.co/50x75" alt="Company logo" width="50" height="75">
+      <div id="hamburger">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+      </div>
+      <!--  mobile navigation start -->
+      <nav id="mobile_navigation" class="navigation hidden">
+        <a href="index.html">Home</a>      
+        <a href="contact.html">Contact</a>      
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="mywork.html">Sample projects</a>
+      </nav>
+      <!--  mobile navigation end -->      
       <!-- navigation (site) start -->
       <nav>
         <a href="index.html">Home</a>      

@@ -9,6 +9,13 @@ function runValidation() {
       {
         window.alert('Form has been submitted successfully');
         setErrorText('Form has been submitted successfully');
+        // empty input fields
+        const txtName = document.getElementById('input_name');
+        txtName.value = '';
+        const txtEmail = document.getElementById('input_email');
+        txtEmail.value = '';
+        const txtMessage = document.getElementById('input_message');
+        txtMessage.value = '';
       }      
 }
 
